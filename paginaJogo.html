@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Gamer – Detalhes do jogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="./imagens/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800;1,900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./paginaJogo.css">
+</head>
+<body>
+
+<div class="avisoPagina" role="status" aria-live="polite"></div>
+
+<header class="cabecalhoDetalhe">
+  <a class="linkLogoSite" href="./index.html" aria-label="Radar Gamer – página inicial">
+    <img class="imagemLogoSite" src="./imagens/logo.png" alt="Radar Gamer" width="160">
+  </a>
+  <a class="linkVoltar" href="./index.html">&larr; Voltar para as promoções</a>
+</header>
+
+<main class="paginaDetalhe">
+
+  <div class="capaDetalheJogo">
+    <img class="capaJogo" alt="">
+  </div>
+
+  <div class="informacoesDetalheJogo">
+
+    <h1 class="nomeJogo">Carregando…</h1>
+
+    <div class="notasDetalheJogo">
+      <span class="notaSteam"></span>
+      <span class="quantidadeAvaliacoes"></span>
+      <span class="notaMetacritic"></span>
+    </div>
+
+    <div class="blocoPrecoDetalhe">
+      <p class="precoAtual"></p>
+      <p class="desconto"></p>
+      <span class="porcentagemDesconto"></span>
+    </div>
+
+    <a class="linkOferta botaoPrimario" href="#" target="_blank" rel="noopener noreferrer">Ver a oferta</a>
+
+    <dl class="fichaTecnicaDetalhe">
+      <div>
+        <dt>Loja</dt>
+        <dd class="nomeLoja"></dd>
+      </div>
+      <div>
+        <dt>Publicadora</dt>
+        <dd class="publicadora"></dd>
+      </div>
+      <div>
+        <dt>Lançamento</dt>
+        <dd class="lancamento"></dd>
+      </div>
+      <div>
+        <dt>Menor preço já registrado</dt>
+        <dd><span class="menorPrecoHistoria"></span> em <span class="dataMenorPreco"></span></dd>
+      </div>
+    </dl>
+
+  </div>
+
+</main>
+
+<script type="module" src="./js/detalhesJogo.js"></script>
+</body>
+</html>

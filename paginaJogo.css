@@ -1,0 +1,243 @@
+:root {
+  --corFundo: #050505;
+  --corSuperficie: #0e0e0e;
+  --corSuperficieElevada: #151515;
+  --corBorda: #222222;
+  --corTextoPrincipal: #ffffff;
+  --corTextoSecundario: #8a8a8a;
+  --corAzul: #1e8cff;
+  --corAzulEscuro: #0b5fd6;
+
+  --fonteTitulos: "Exo 2", "Arial Black", system-ui, sans-serif;
+  --fonteTextos: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --arredondamentoGrande: 20px;
+  --arredondamentoMedio: 12px;
+  --arredondamentoPequeno: 8px;
+  --arredondamentoPilula: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--corFundo);
+  color: var(--corTextoPrincipal);
+  font-family: var(--fonteTextos);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--corAzul);
+  outline-offset: 3px;
+}
+
+.avisoPagina {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  z-index: 200;
+  max-width: min(90vw, 480px);
+  padding: 14px 20px;
+  background: var(--corSuperficieElevada);
+  border: 1px solid var(--corBorda);
+  border-left: 3px solid #ff4d4d;
+  border-radius: var(--arredondamentoMedio);
+  color: var(--corTextoPrincipal);
+  font-size: 0.9rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  transform: translateX(-50%);
+}
+
+.avisoPagina:empty {
+  display: none;
+}
+
+.cabecalhoDetalhe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 20px clamp(16px, 4vw, 40px);
+  border-bottom: 1px solid var(--corBorda);
+}
+
+.linkVoltar {
+  color: var(--corTextoSecundario);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.linkVoltar:hover {
+  color: var(--corAzul);
+}
+
+.paginaDetalhe {
+  display: grid;
+  grid-template-columns: minmax(280px, 440px) 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px) clamp(16px, 4vw, 40px) 64px;
+}
+
+.capaDetalheJogo {
+  aspect-ratio: 460 / 215;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+  border: 1px solid var(--corBorda);
+  border-radius: var(--arredondamentoGrande);
+}
+
+.capaJogo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.informacoesDetalheJogo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.nomeJogo {
+  font-family: var(--fonteTitulos);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.notasDetalheJogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  color: var(--corTextoSecundario);
+  font-size: 0.9rem;
+}
+
+.notasDetalheJogo span:empty {
+  display: none;
+}
+
+.blocoPrecoDetalhe {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.precoAtual {
+  color: var(--corTextoSecundario);
+  font-size: 0.95rem;
+}
+
+.desconto {
+  font-family: var(--fonteTitulos);
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.desconto:empty {
+  display: none;
+}
+
+.porcentagemDesconto {
+  padding: 4px 10px;
+  background: var(--corAzul);
+  border-radius: var(--arredondamentoPequeno);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.porcentagemDesconto:empty {
+  display: none;
+}
+
+.blocoPrecoDetalhe:has(.desconto:empty) .precoAtual {
+  font-family: var(--fonteTitulos);
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--corTextoPrincipal);
+}
+
+.botaoPrimario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  background: var(--corAzul);
+  border-radius: var(--arredondamentoPilula);
+  color: #ffffff;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.botaoPrimario:hover {
+  background: var(--corAzulEscuro);
+  transform: translateY(-1px);
+}
+
+.fichaTecnicaDetalhe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  width: 100%;
+  padding: 20px;
+  background: var(--corSuperficie);
+  border: 1px solid var(--corBorda);
+  border-radius: var(--arredondamentoGrande);
+}
+
+.fichaTecnicaDetalhe dt {
+  color: var(--corTextoSecundario);
+  font-size: 0.8rem;
+}
+
+.fichaTecnicaDetalhe dd {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+
+  .paginaDetalhe {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .fichaTecnicaDetalhe {
+    grid-template-columns: 1fr;
+  }
+
+  .cabecalhoDetalhe {
+    padding: 16px;
+  }
+}

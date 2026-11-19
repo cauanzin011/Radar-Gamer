@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Gamer – Promoções de jogos monitoradas para você</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="./imagens/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,800;1,900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./PaginaPrincipal.css">
+</head>
+<body>
+
+<div class="avisoPagina" role="status" aria-live="polite"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="iconeCasa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z"/></symbol>
+  <symbol id="iconeEtiqueta" viewBox="0 0 24 24"><path fill="currentColor" d="M3 12.6V4a1 1 0 0 1 1-1h8.6a1 1 0 0 1 .7.3l7.4 7.4a1 1 0 0 1 0 1.4l-8.6 8.6a1 1 0 0 1-1.4 0L3.3 13.3a1 1 0 0 1-.3-.7ZM7.5 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></symbol>
+  <symbol id="iconeCoracao" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-8-5.2-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.8-8 11-8 11Z"/></symbol>
+  <symbol id="iconeSino" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22a2.4 2.4 0 0 0 2.4-2.4H9.6A2.4 2.4 0 0 0 12 22Zm7-6.5V11a7 7 0 0 0-5.2-6.8V3.6a1.8 1.8 0 0 0-3.6 0v.6A7 7 0 0 0 5 11v4.5L3 17.5V19h18v-1.5l-2-2Z"/></symbol>
+  <symbol id="iconeInformacao" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-6h2v6Zm0-8h-2V7h2v2Z"/></symbol>
+  <symbol id="iconeLupa" viewBox="0 0 24 24"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></symbol>
+  <symbol id="iconeUsuario" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5Z"/></symbol>
+</svg>
+
+<div class="estruturaPagina">
+
+    <aside class="menuLateral">
+    <a class="linkLogoSite" href="#" aria-label="Radar Gamer – página inicial">
+      <img class="imagemLogoSite" src="./imagens/logo.png" alt="Radar Gamer" width="180">
+    </a>
+
+    <nav class="listaNavegacao" aria-label="Principal">
+      <a class="itemNavegacao itemNavegacaoAtivo" href="#" aria-current="page">
+        <svg class="iconeItemNavegacao"><use href="#iconeCasa"/></svg>Início
+      </a>
+      <a class="itemNavegacao" href="#todosJogos">
+        <svg class="iconeItemNavegacao"><use href="#iconeEtiqueta"/></svg>Promoções
+      </a>
+      <a class="itemNavegacao" href="#">
+        <svg class="iconeItemNavegacao"><use href="#iconeCoracao"/></svg>Favoritos
+      </a>
+      <a class="itemNavegacao" href="#secaoAlertas">
+        <svg class="iconeItemNavegacao"><use href="#iconeSino"/></svg>Alertas
+      </a>
+      <a class="itemNavegacao" href="#">
+        <svg class="iconeItemNavegacao"><use href="#iconeInformacao"/></svg>Sobre
+      </a>
+    </nav>
+  </aside>
+
+  <main class="areaPrincipal">
+
+        <header class="barraSuperior">
+            <div class="blocoBusca">
+        <div class="campoBuscaJogo">
+          <svg class="iconeCampoBusca" aria-hidden="true"><use href="#iconeLupa"/></svg>
+          <input class="inputBuscaJogo" type="search" placeholder="Buscar jogos…" aria-label="Buscar jogos" aria-describedby="dicaBuscaJogo">
+          <button class="pesquisarJogos" type="button">Pesquisar</button>
+        </div>
+        <span id="dicaBuscaJogo" class="somenteLeitor">Digite o nome do jogo e toque em Pesquisar</span>
+        <div class="divPesquisaJogos" role="region" aria-live="polite"></div>
+      </div>
+    </header>
+
+        <section class="bannerDestaque" aria-labelledby="tituloBannerDestaque">
+      <img class="imagemBanner" src="" alt="">
+      <div class="textoBannerDestaque">
+        <span class="etiquetaDestaque">Em destaque</span>
+        <h1 class="tituloBannerDestaque" id="tituloBannerDestaque"></h1>
+        <p class="precoBannerDestaque">
+          <s class="precoAntigoBannerDestaque">---</s>
+          <strong class="precoAtualBannerDestaque">---</strong>
+        </p>
+        <a class="botaoPrimario" href="#">Ver detalhes</a>
+      </div>
+
+    </section>
+
+        <section id="todosJogos" aria-label="Jogos em promoção">
+      <div class="barraFiltrosJogos">
+        <button class="botaoFiltro botaoFiltroAtivo" type="button">Todos</button>
+        <button class="botaoFiltro" type="button">Em promoção</button>
+        <button class="botaoFiltro" type="button">Populares</button>
+      </div>
+
+      <div class="gradeJogos">
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="cartaoJogo">
+          <div class="capaJogo"><img class="imagemCapaJogo" alt=""><span class="etiquetaDesconto"></span></div>
+          <div class="informacoesJogo">
+            <h3 class="nomeJogo">Carregando…</h3>
+            <p class="precoJogo"><s class="precoAntigoJogo"></s><strong class="precoAtualJogo"></strong></p>
+            <div class="linhaAcoesJogo">
+              <a class="botaoSecundario" href="#">Ver detalhes</a>
+              <button class="botaoFavorito" type="button" aria-label="Favoritar jogo" aria-pressed="false">
+                <svg class="iconeBotaoFavorito"><use href="#iconeCoracao"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+        <section class="blocoAlertas" id="secaoAlertas">
+      <svg class="iconeBlocoAlertas" aria-hidden="true"><use href="#iconeSino"/></svg>
+      <div class="textoBlocoAlertas">
+        <h2 class="tituloBlocoAlertas">Receba alertas de promoções</h2>
+        <p class="descricaoBlocoAlertas">Escolha seus jogos e avisamos quando o preço cair.</p>
+      </div>
+      <a class="botaoPrimario" id="botaoAlerta" href="#">Configurar alertas</a>
+    </section>
+
+  </main>
+
+  
+  <section class="secaoPromocao" aria-labelledby="tituloSecaoPromocao">
+    <header class="cabecalhoSecao">
+      <h2 class="tituloSecao" id="tituloSecaoPromocao">Promoções</h2>
+      <p class="descricaoSecao">Ofertas atuais das principais lojas, com os preços em reais.</p>
+    </header>
+
+    <div class="blocoBusca">
+      <div class="campoBuscaJogo">
+        <svg class="iconeCampoBusca" aria-hidden="true"><use href="#iconeLupa"/></svg>
+        <input class="inputBuscaJogo" type="search" placeholder="Buscar jogos…" aria-label="Buscar jogos nas promoções">
+        <button class="pesquisarJogos" type="button">Pesquisar</button>
+      </div>
+      <div class="divPesquisaJogos" role="region" aria-live="polite"></div>
+    </div>
+
+    <div class="divPromocao"></div>
+
+    <nav class="paginacaoJogos" aria-label="Páginas de promoções">
+      <button class="botaoFiltro botaoFiltroAtivo" type="button">1</button>
+      <button class="botaoFiltro" type="button">2</button>
+      <button class="botaoFiltro" type="button">3</button>
+      <button class="botaoFiltro" type="button">4</button>
+      <button class="botaoFiltro" type="button">5</button>
+    </nav>
+  </section>
+
+  <section class="secaoFavoritos" aria-labelledby="tituloSecaoFavoritos">
+    <header class="cabecalhoSecao">
+      <h2 class="tituloSecao" id="tituloSecaoFavoritos">Favoritos</h2>
+      <p class="descricaoSecao">Os jogos marcados com o coração ficam guardados aqui.</p>
+    </header>
+
+    <div class="divFavoritos"></div>
+
+    <div class="estadoVazio">
+      <svg class="iconeEstadoVazio" aria-hidden="true"><use href="#iconeCoracao"/></svg>
+      <h3 class="tituloEstadoVazio">Nenhum favorito por enquanto</h3>
+      <p class="descricaoEstadoVazio">Toque no coração de um jogo para acompanhar o preço dele por aqui.</p>
+    </div>
+  </section>
+
+  <section class="secaoAlertas" aria-labelledby="tituloSecaoAlertas">
+    <header class="cabecalhoSecao">
+      <h2 class="tituloSecao" id="tituloSecaoAlertas">Alertas de preço</h2>
+      <p class="descricaoSecao">Diga quanto quer pagar e avisamos quando o jogo chegar nesse preço.</p>
+    </header>
+
+    <div class="formularioAlerta">
+      <label class="campoFormulario">
+        <span class="rotuloCampo">Jogo</span>
+        <input class="entradaCampo" id="inputNome" type="search" placeholder="Ex.: Elden Ring">
+      </label>
+      <label class="campoFormulario">
+        <span class="rotuloCampo">Preço desejado (R$)</span>
+        <input class="entradaCampo" id="inputPreco" type="number" min="0" step="0.01" placeholder="99,90">
+      </label>
+      <label class="campoFormulario">
+        <span class="rotuloCampo">E-mail para o aviso</span>
+        <input class="entradaCampo" id="inputEmail" type="email" placeholder="voce@email.com">
+      </label>
+      <button class="botaoPrimario" id="botaoCriarAlerta" type="button">Criar alerta</button>
+    </div>
+
+    <div class="divAlertas"></div>
+
+    <div class="estadoVazio">
+      <svg class="iconeEstadoVazio" aria-hidden="true"><use href="#iconeSino"/></svg>
+      <h3 class="tituloEstadoVazio">Você ainda não tem alertas</h3>
+      <p class="descricaoEstadoVazio">Os alertas que você criar aparecem aqui.</p>
+    </div>
+  </section>
+
+  <section class="secaoSobre" aria-labelledby="tituloSecaoSobre">
+    <header class="cabecalhoSecao">
+      <h2 class="tituloSecao" id="tituloSecaoSobre">Sobre o Radar Gamer</h2>
+      <p class="descricaoSecao">Acompanhamos o preço dos jogos para você comprar na hora certa, sem abrir loja por loja.</p>
+    </header>
+
+    <div class="gradeSobre">
+      <article class="cartaoSobre">
+        <svg class="iconeCartaoSobre" aria-hidden="true"><use href="#iconeLupa"/></svg>
+        <h3 class="tituloCartaoSobre">Monitoramos as lojas</h3>
+        <p class="textoCartaoSobre">Reunimos as ofertas de várias lojas digitais em um só lugar.</p>
+      </article>
+      <article class="cartaoSobre">
+        <svg class="iconeCartaoSobre" aria-hidden="true"><use href="#iconeEtiqueta"/></svg>
+        <h3 class="tituloCartaoSobre">Mostramos o desconto real</h3>
+        <p class="textoCartaoSobre">Comparamos o preço normal com o da promoção e destacamos as maiores quedas.</p>
+      </article>
+      <article class="cartaoSobre">
+        <svg class="iconeCartaoSobre" aria-hidden="true"><use href="#iconeSino"/></svg>
+        <h3 class="tituloCartaoSobre">Avisamos você</h3>
+        <p class="textoCartaoSobre">Crie um alerta e receba um aviso quando o jogo chegar ao preço que você quer.</p>
+      </article>
+    </div>
+
+    <p class="notaSobre">As ofertas vêm da CheapShark. Os preços são convertidos de dólar para real e podem mudar na loja.</p>
+  </section>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
