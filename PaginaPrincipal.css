@@ -448,6 +448,36 @@ input {
   animation: pulsarFavorito 0.4s ease;
 }
 
+.botaoRemoverAlerta {
+    background: transparent;
+    color: #ff5252;
+    border: 1px solid #ff5252;
+    border-radius: 8px;
+    padding: 9px 18px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.botaoRemoverAlerta:hover {
+    background: #ff5252;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 82, 82, 0.25);
+}
+
+.botaoRemoverAlerta:active {
+    transform: scale(0.96);
+}
+
+.botaoRemoverAlerta:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
 @keyframes pulsarFavorito {
   0% {
     transform: scale(1);
