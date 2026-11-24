@@ -31,3 +31,9 @@ export function converterParaReal(precoDolar, cotacao) {
     return Number(precoDolar) * cotacao
 
 }
+
+export function converterParaDolar(precoReal, cotacao){
+
+    return Number(precoReal) / cotacao
+
+}
